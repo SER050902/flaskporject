@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block contingut %}
+    <h1 style="color: orange">LOGIN</h1>
+
+    <form action="{{ url_for('login') }}" method="post">
+        <label for="username">Nom d'usuari:</label>
+        <input type="text" placeholder="Ingrese el usuario" id="username" name="username" required>
+
+        <label for="password">Contrasenya:</label>
+        <input type="password" placeholder="Ingrese la contraseña" id="password" name="password" required>
+
+        <button type="submit">Iniciar sessió</button>
+    </form>
+
+    {% if error_message %}
+        <p style="color: red;text-align: center">{{ error_message }}</p>
+    {% endif %}
+
+{% endblock %}
+

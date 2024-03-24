@@ -1,0 +1,159 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('https://i.pinimg.com/originals/17/30/5b/17305b9fa208001b4177a24febc1a941.png');
+    background-size: cover;
+        }
+
+img {
+    display: block;
+    margin: 20px auto;
+    max-width: 40%;
+}
+
+h1{
+    text-align: center;
+    color: #900;
+}
+p, h2{
+    color: gainsboro;
+}
+
+table {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    color: white;
+}
+
+th {
+    color: orange;
+}
+
+table, th, td {
+    border: 2px solid orange;
+}
+
+table img {
+    width: 150px;
+    object-fit: cover;
+    vertical-align: middle;
+    margin: 0 auto;
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+input[type="text"], input[type="date"], input[type="password"],select {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+select {
+  cursor: pointer;
+}
+
+button[type="submit"] {
+  padding: 12px 24px;
+  background-color: orange;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: darkorange;
+}
+
+.enlace {
+    background-color: red;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: orange;
+    border: none;
+
+}
+.enlace-add {
+    background-color: purple;
+    font-size: 16px;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: red;
+}
+
+.enlace-add:hover {
+    background-color: #990000;
+}
+
+
+.enlace:hover {
+    background-color: purple;
+}
+
+
+.enlace-delete:hover,
+.enlace-modificar:hover {
+    background-color: orange;
+}
+
+.enlace-delete,
+.enlace-modificar {
+    display: inline-block;
+    margin-right: 10px;
+    color: #fff;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.enlace-delete {
+    background-color: #FF5733;
+}
+
+.enlace-modificar {
+    background-color: #3366FF;
+}
+
+.enlace-logout {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 10px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.enlace-logout:hover {
+    background-color: #2980b9; /* 鼠标悬停时的背景颜色 */
+}

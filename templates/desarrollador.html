@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block navigation %}
+    <a class="enlace" href="/">volver a index</a>
+    <a class="enlace" href="/videojuego">Videojuego</a>
+    <a class="enlace" href="/api/desarrolladores">API JSON</a>
+{% endblock %}
+
+{% block contingut %}
+    <h1>Desarrollador</h1>
+    <a class="enlace-add" href="{{ url_for('insert_desarrollador') }}">ADD</a>
+    <p></p>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Ubicacion</th>
+                <th>fundacion</th>
+                <th>CEO</th>
+                <th>Empleados</th>
+                <th>Descripción</th>
+                <th>Imagen</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for desarrollador in desarrolladores %}
+                <tr>
+                    <td>{{ desarrollador.idDe }}</td>
+                    <td>{{ desarrollador.nombre }}</td>
+                    <td>{{ desarrollador.ubicacion }}</td>
+                    <td>{{ desarrollador.fundacion }}</td>
+                    <td>{{ desarrollador.CEO }}</td>
+                    <td>{{ desarrollador.empleados }}</td>
+                    <td>{{ desarrollador.descripcion }}</td>
+                    <td><img src="{{ desarrollador.imagen_url }}" alt="Imagen del desarrollador {{desarrollador.nombre}}"></td>
+                    <td>
+                        <a class="enlace-delete" href="/desarrollador/{{ desarrollador.idDe }}/delete" onclick="return confirm('Estas seguro?')">Eliminar</a>
+                        <p></p>
+                        <a class="enlace-modificar" href="/desarrollador/{{ desarrollador.idDe }}/modificar" >Modificar</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

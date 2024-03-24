@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block contingut %}
+    <h1>Desarrollador</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Ubicacion</th>
+                <th>fundacion</th>
+                <th>CEO</th>
+                <th>Empleados</th>
+                <th>Descripción</th>
+                <th>Imagen</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for desarrollador in desarrolladores %}
+                <tr>
+                    <td>{{ desarrollador.idDe }}</td>
+                    <td>{{ desarrollador.nombre }}</td>
+                    <td>{{ desarrollador.ubicacion }}</td>
+                    <td>{{ desarrollador.fundacion }}</td>
+                    <td>{{ desarrollador.CEO }}</td>
+                    <td>{{ desarrollador.empleados }}</td>
+                    <td>{{ desarrollador.descripcion }}</td>
+                    <td><img src="{{ desarrollador.imagen_url }}" alt="Imagen del desarrollador {{desarrollador.nombre}}"></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

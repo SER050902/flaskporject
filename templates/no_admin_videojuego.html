@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block contingut %}
+    <h1>Videojuego</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Genero</th>
+                <th>Modo</th>
+                <th>Desarrollado</th>
+                <th>Descripción</th>
+                <th>Lanzamiento PC</th>
+                <th>Lanzamiento PS4</th>
+                <th>Lanzamiento PS5</th>
+                <th>lanzamiento XBOX-S-X</th>
+                <th>lanzamiento NS</th>
+                <th>IMAGEN</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for videojuego in videojuegos %}
+                <tr>
+                    <td>{{ videojuego.idVi }}</td>
+                    <td>{{ videojuego.nombre }}</td>
+                    <td>{{ videojuego.genero }}</td>
+                    <td>{{ videojuego.modo }}</td>
+                    {% for desarrollador in videojuego.desarrolladores %}
+                        {% if videojuego.desarrollado == desarrollador.idDe %}
+                            <td>{{ desarrollador.nombre }}</td>
+                        {% endif %}
+                    {% endfor %}
+                    <td>{{ videojuego.descripcion }}</td>
+                    <td>{{ videojuego.lanzamiento_PC }}</td>
+                    <td>{{ videojuego.lanzamiento_PS4 }}</td>
+                    <td>{{ videojuego.lanzamiento_PS5 }}</td>
+                    <td>{{ videojuego.lanzamiento_XBOX_S_X }}</td>
+                    <td>{{ videojuego.lanzamiento_NS }}</td>
+                    <td><img src="{{ videojuego.imagen_url }}" alt="Imagen del videojuego {{ videojuego.nombre }}"></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

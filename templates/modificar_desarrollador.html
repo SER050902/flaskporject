@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block contingut %}
+    <h1>MODIFICAR VIDEOJUEGOS</h1>
+    <form action='/desarrollador/{{ desarrollador.idDe }}/modificar' method="POST">
+        <label for="nombre">Nombre</label>
+        <input type="text" placeholder="Ingrese el nombre" name="nombre" id="nombre" value="{{ desarrollador.nombre }}"><br>
+
+        <label for="ubicacion">ubicación</label>
+        <input type="text" placeholder="Ingrese el ubicación" name="ubicacion" id="ubicacion" value="{{ desarrollador.ubicacion }}"><br>
+
+        <label for="fundacion">fundación</label>
+        <input type="date" placeholder="Ingrese el fundación" name="fundacion" id="fundacion" value="{{ desarrollador.fundacion }}"><br>
+
+        <label for="CEO">CEO</label>
+        <input type="text" placeholder="CEO" name="CEO" id="CEO" value="{{ desarrollador.CEO }}"><br>
+
+        <label for="empleados">Numeros de los empleados</label>
+        <input type="text" placeholder="Ingrese cuantos empleados hay" name="empleados" id="empleados" value="{{ desarrollador.empleados }}" ><br>
+
+        <label for="descripcion">Descripción</label>
+        <input type="text" placeholder="Escribir descripción" name="descripcion" id="descripcion" value="{{ desarrollador.descripcion }}"><br>
+
+        <label for="imagen_url">URL del Imagen</label>
+        <input type="text" placeholder="Ingrese la URL de la imagen" name="imagen_url" id="imagen_url" value="{{ desarrollador.imagen_url }}"><br>
+
+        <button type="submit">modificar Desarrollador</button>
+    </form>
+{% endblock %}

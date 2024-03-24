@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block navigation %}
+    <a href="/">Volver a index</a>
+    <a href="/desarrollador">Volver a pagina</a>
+{% endblock %}
+
+
+{% block contingut %}
+    <h1>INSETAR DESARROLLADORES</h1>
+    <form action='/Insert_desarrollador' method="POST">
+        <label for="nombre">Nombre</label>
+        <input type="text" placeholder="Ingrese el nombre" name="nombre" id="nombre"><br>
+
+        <label for="ubicacion">ubicación</label>
+        <input type="text" placeholder="Ingrese el ubicación" name="ubicacion" id="ubicacion" ><br>
+
+        <label for="fundacion">fundación</label>
+        <input type="date" placeholder="Ingrese el fundación" name="fundacion" id="fundacion" ><br>
+
+        <label for="CEO">CEO</label>
+        <input type="text" placeholder="CEO" name="CEO" id="CEO" ><br>
+
+        <label for="empleados">Numeros de los empleados</label>
+        <input type="text" placeholder="Ingrese cuantos empleados hay" name="empleados" id="empleados" ><br>
+
+        <label for="descripcion">Descripción</label>
+        <input type="text" placeholder="Escribir descripción" name="descripcion" id="descripcion" ><br>
+
+        <label for="imagen_url">URL del Imagen</label>
+        <input type="text" placeholder="Ingrese la URL de la imagen" name="imagen_url" id="imagen_url" ><br>
+
+        <button type="submit">Insertar Desarrollador</button>
+    </form>
+{% endblock %}

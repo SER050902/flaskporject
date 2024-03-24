@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block contingut %}
+    <h1>LOGIN</h1>
+    <form action='/insert_videojuego' method="POST" >
+        <label for="nombre">Nombre</label>
+        <input type="text" placeholder="Ingrese el nombre" name="nombre" id="nombre"><br>
+
+        <label for="genero">Género</label>
+        <input type="text" placeholder="Ingrese el género" name="genero" id="genero" ><br>
+
+        <label for="modo">Modo</label>
+        <input type="text" placeholder="Ingrese el modo" name="modo" id="modo" ><br>
+
+        <label for="nombre">Desarrolladores</label>
+        <select id="desarrollado" name="desarrollado">
+            {% for desarrollador in desarrolladores %}
+                <option value="{{ desarrollador.idDe }}">{{ desarrollador.nombre }}</option>
+            {% endfor %}
+        </select>
+
+        <label for="descripcion">Descripción</label>
+        <input type="text" placeholder="Escribir descripción" name="descripcion" id="descripcion" ><br>
+
+        <label for="lanzamiento_PC">Fecha de Lanzamiento del PC</label>
+        <input type="date" placeholder="Seleccione la fecha de lanzamiento" name="lanzamiento_PC" id="lanzamiento_PC" ><br>
+
+        <label for="lanzamiento_PS4">Fecha de Lanzamiento del PS4</label>
+        <input type="date" placeholder="Seleccione la fecha de lanzamiento" name="lanzamiento_PS4" id="lanzamiento_PS4" ><br>
+
+        <label for="lanzamiento_PS5">Fecha de Lanzamiento del PS5</label>
+        <input type="date" placeholder="Seleccione la fecha de lanzamiento" name="lanzamiento_PS5" id="lanzamiento_PS5" ><br>
+
+        <label for="lanzamiento_XBOX_S_X">Fecha de Lanzamiento del XBOX-S-X</label>
+        <input type="date" placeholder="Seleccione la fecha de lanzamiento" name="lanzamiento_XBOX_S_X" id="lanzamiento_XBOX_S_X" ><br>
+
+        <label for="lanzamiento_NS">Fecha de Lanzamiento del NS</label>
+        <input type="date" placeholder="Seleccione la fecha de lanzamiento" name="lanzamiento_NS" id="lanzamiento_NS" ><br>
+
+        <label for="imagen_url">URL del Imagen</label>
+        <input type="text" placeholder="Ingrese la URL de la imagen" name="imagen_url" id="imagen_url" ><br>
+
+        <button type="submit">Insertar Videojuego</button>
+    </form>
+{% endblock %}

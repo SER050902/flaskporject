@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>INSERTAR VIDEOJUEGO</h1>
+    <form action="{{ url_for('insert_videojuego') }}" method="post">
+        <label for="nombre">Nombre</label>
+        <input id="nombre" name="nombre" required><br>
+
+        <label for="genero">Género</label>
+        <input id="genero" name="genero" required><br>
+
+        <label for="modo">Modo</label>
+        <input id="modo" name="modo" required><br>
+
+        <label for="fecha_lanzamiento">Fecha de lanzamiento</label>
+        <input id="fecha_lanzamiento" name="fecha_lanzamiento" type="date" required><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+{% endblock %}
